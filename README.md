@@ -341,3 +341,7 @@ TODO: look to make this creator role.
 - ownership in wallet
 - operators: brokers/auctioneers (consignment)
 - Physical, Virtual, Negative
+
+---
+## Thank you crypto community.
+- contact netcinematics(at)protonmail(dot)com
