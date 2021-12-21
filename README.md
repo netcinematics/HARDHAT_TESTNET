@@ -180,9 +180,9 @@ MAX ANNOTATED EXAMPLES in /contracts
 - https://github.com/OpenZeppelin/openzeppelin-test-helpers/tree/master/test/src
 ----
 ### 11) ERC20, ERC721, ERC1155 ( standards )
-##ERC20
+## ERC20
 ----
-##ERC721
+## ERC721
 - MINIMUM interface for SMARTCONTRACTS 
 - managed, owned, traded - TOKENS.
 - unrestricted functions and metadata(!)
@@ -235,17 +235,18 @@ ERC721 is Context,IERC721,IERC721Metadata
 > fn _beforeTokenTransfer
 ```
 ----
-###ERC721-OPENZEPPELIN
+### ERC721-OPENZEPPELIN
 LINK: https://docs.openzeppelin.com/contracts/4.x/api/token/erc721
 - INTERFACES, CONTRACTS, UTILITIES.
 - Unopinion, Opinion: ERC721PresetMinterPauserAutoId
+```JavaScript
 > IERC721 - required to be ERC721 compliant.
 > IERC721Metadata *
 > IERC721Enumerable *
 > IERC721Receiver - prevent locked tokens (verify receiver)
 > ERC721Pausable - pause transfer
 > ERC721Burnable - destroy
-####CORE IERC721
+#### CORE IERC721
 > event Transfer
 > event Approval
 > event ApprovalForAll
@@ -255,17 +256,17 @@ LINK: https://docs.openzeppelin.com/contracts/4.x/api/token/erc721
 > fn getApproved - emits Approval Event 
 > fn setApprovalForAll, operator transfer
 > fn isApprovedForAll, is operator allowed.
-####IERC165 - supportsInterface
-####IERC721Metadata
+#### IERC165 - supportsInterface
+#### IERC721Metadata
 > name, symbol, tokenURI
-####IERC721Enumerable
+#### IERC721Enumerable
 > totalSupply - total tokens
 > tokenOfOwnerByIndex - tokenId by _owner at index
 - use with balanceOf to enumerate all of owners tokens
 - TODO similar mechanism to enumerate all creator tokens
 > tokenByIndex - tokenID at Index
 - use with totalSupply to enum all tokens.
-##ERC721
+## ERC721
 constructor(name_, symbol_)
 supportsInterface(interfaceId)
 balanceOf(owner)
@@ -296,19 +297,19 @@ _setApprovalForAll(owner, operator, approved)
 > hook into original behavior - so far the only one!
 - Rules of Hooks
 > virtual, always call parent hook using super.
-####ERC721Enumerable 
-####ERC721Receiver
-####ERC721Pausable - freezing all transfers.
+#### ERC721Enumerable 
+#### ERC721Receiver
+#### ERC721Pausable - freezing all transfers.
 > _beforeTokenTransfer - becomes pausible
 > event Paused
 > event Unpaused
 > fn paused, _pause, _unpause
-####ERC721Burnable
-####ERC721URIStorage
+#### ERC721Burnable
+#### ERC721URIStorage
 > fn tokenURI
 > fn setTokenURI
 > fn burn
-####ERC721PresetMinterPauserAutoId (opinion)
+#### ERC721PresetMinterPauserAutoId (opinion)
 - Roles with AccessControl
 - ROLES: ADMIN_ROLE, MINTER_ROLE, PAUSER_ROLE 
 TODO: (CREATOR_ROLE)
@@ -322,14 +323,15 @@ TODO: look to make this creator role.
 > fn hasRole
 > fn _checkRole
 > events roleChange, RoleGranted, RoleRevoked
-###UTILITIES
-###ERC721Holder
+### UTILITIES
+### ERC721Holder
 > fn onERC721Received.
+```
 ----
-###ERC1155
+## ERC1155
 ----
-#CRYPTO-USE-CASES
-###ERC721
+# CRYPTO-USE-CASES
+### ERC721
 - UNIQUE TOKENS.
 - mint burn
 - transfer and track
