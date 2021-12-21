@@ -1,0 +1,23 @@
+{
+  "name": "HARDHAT_TESTNET",
+  "version": "1.0.0",
+  "description": "Use HARDHAT as a REUSABLE TESTNET.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netcinematics/HARDHAT_TESTNET.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netcinematics/HARDHAT_TESTNET/issues"
+  },
+  "homepage": "https://github.com/netcinematics/HARDHAT_TESTNET#readme",
+  "devDependencies": {
+    "hardhat": "^2.8.0"
+  }
+}
