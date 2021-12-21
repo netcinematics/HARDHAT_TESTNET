@@ -6,25 +6,26 @@ With OpenZeppelin Smart Contracts.
 - Unit Tests - from OpenZeppelin
 - Private Testnet - Hardhat Network
 - Rinkaby, Robsten, Mumbai.
-## OPENZEPPELIN STUDY 
+## OPENZEPPELIN STUDY LINKS 
 Smart Contract Development Best Practices.
 - derived from https://docs.openzeppelin.com/learn/
 - and https://wizard.openzeppelin.com
 - also HARDHAT: https://hardhat.org/getting-started/
-### INDEX: 
+### INDEX (below): 
 1) QUICK START (existing PROJECT), 
-2) CREATE NEW (CRYPTO-PROJECT, scaffold),
+2) CREATE NEW (CRYPTO-PROJECT, HARDHAT scaffold),
 3) ERC721 Standard Review
 - ADVANCED ASSERTIONS
 ----
-## STARTUP: 
+### QUICK START (existing project): 
 - compile, ganache, migrate, exec, test,
 > npm install
 > npx hardhat compile
 > npx hardhat node
 > npx hardhat test
 ----
-## 1) Build a SCAFFOLD:
+## CREATE NEW (CRYPTO-PROJECT, HARDHAT scaffold)
+### 1) Build a SCAFFOLD:
 > mkdir PROJECTS/CRYPTO/EXAMPLE && cd PROJECTS/CRYPTO/EXAMPLE
 > npm init -y
 > code .
@@ -37,7 +38,7 @@ Smart Contract Development Best Practices.
 > npx hardhat run scripts/sample-script.js --network localhost
 - expose JSON-RPC interface. 
 - Connect wallet or app to http://localhost:8545.
-###HARDHAT
+### HARDHAT
 - Hardhat Network, uses @ethereumjs/vm
 - Hardhat Runner, extensible TASK RUNNER
 - tasks and plugins, tasks call tasks.
@@ -55,7 +56,7 @@ GitHub with LICENSE MIT
 > create s3cr3tz.json
 .gitignore s3cr3tz.json
 -----
-## 2) SOLIDITY PROJECT!
+### 2) SOLIDITY PROJECT!
 > npm install --save-dev truffle
 - Truffle or Hardhat. 
 - Truffle uses Web3.js. Hardhat uses ethers.js
@@ -63,7 +64,7 @@ GitHub with LICENSE MIT
 - (to various TEST NETS)
 - Like Ganache (local) or Rinkeby, public.
 -----
-## 3) CONTRACTS!!
+### 3) CONTRACTS!!
 > create /contracts/BASIC_721_oz.sol
 - go to Open Zeppelin Wizard to get code.
 - compile SOL into BYTECODE for EVM
@@ -74,16 +75,16 @@ GitHub with LICENSE MIT
 artifacts
 cache
 ---
-##HARDHAT NETWORK CONSOLE
+#### HARDHAT NETWORK CONSOLE
 > npx hardhat console --network localhost
 > const Box = await ethers.getContractFactory('Box');
 > const box = await Box.attach('0x5FbDB2315678afecb367f032d93F642f64180aa3')
-##HARDHAT by SCRIPT
+#### HARDHAT by SCRIPT
 > npx hardhat run --network localhost ./scripts/index.js
 > const address = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 > const Box = await ethers.getContractFactory('Box');
 > const box = await Box.attach(address); //get address from DEPLOY
-##HARDHAT UNIT TESTS
+#### HARDHAT UNIT TESTS
 > npm install --save-dev chai
 > npx hardhat test
 > npm install --save-dev @openzeppelin/test-helpers
@@ -95,7 +96,7 @@ MAX ANNOTATED EXAMPLES in /contracts
 > npm install --save-dev @openzeppelin/contracts
 > npx truffle compile
 ----
-## 5) DEVNET (testnet local)
+### 5) DEVNET (testnet local)
 - with Ganache-CLI
 > npm install --save-dev ganache-cli
 - DEPLOY / migrate
@@ -115,7 +116,7 @@ MAX ANNOTATED EXAMPLES in /contracts
 - puts BYTECODE artifacts and ABI to ganache
 - if ERROR, update migrate, or restart GANACHE
 ----
-## 6) PROTOTYPE-TEST (local network - truffle CONSOLE)
+### 6) PROTOTYPE-TEST (local network - truffle CONSOLE)
 > npx truffle console --network development
 - now INIT CONTRACT VARIABLE (charged 0.008 ETH)
 > accounts
@@ -127,7 +128,7 @@ MAX ANNOTATED EXAMPLES in /contracts
 - no receipt, no transaction.
 - CMD-LINE-QUERY
 ----
-## 7) SCRIPT-DEV ( /script/js with Web3.js)
+### 7) SCRIPT-DEV ( /script/js with Web3.js)
 - Truffle executes ./scripts
 - once deployed, any library sees contract
 - in scripts-index:
@@ -135,7 +136,7 @@ MAX ANNOTATED EXAMPLES in /contracts
 // console.log(accounts)
 > npx truffle exec --network development ./scripts/index.js
 ----
-## 8) JS instance of CONTRACT ( Web3.js)
+### 8) JS instance of CONTRACT ( Web3.js)
 - Truffle CONTRACT, as JSON.
 // const BASIC_oz = artifacts.require('BASIC_oz');
 // const _basic_oz = await BASIC_oz.deployed();
@@ -145,13 +146,13 @@ MAX ANNOTATED EXAMPLES in /contracts
 - CALL TRANSACTION
 // await _basic_oz.store(23);
 ----
-## 9) UNIT-TESTS ( chai.js)
+### 9) UNIT-TESTS ( chai.js)
 > npm install --save-dev chai
 - /tests mirror /contracts 1 to 1.
 > create test/BASIC_oz.test.js
 > npx truffle test
 ----
-## 10) OZ TEST-HELPERS ( complex assertions )
+### 10) OZ TEST-HELPERS ( complex assertions )
 > npm install --save-dev @openzeppelin/test-helpers
 - EXTRAs like
 - veryify revert, exact balances, events emitted, time.
@@ -159,10 +160,10 @@ MAX ANNOTATED EXAMPLES in /contracts
 - EXAMPLES: 
 - https://github.com/OpenZeppelin/openzeppelin-test-helpers/tree/master/test/src
 ----
-## 11) ERC20, ERC721, ERC1155 ( standards )
-###ERC20
+### 11) ERC20, ERC721, ERC1155 ( standards )
+##ERC20
 ----
-###ERC721
+##ERC721
 - MINIMUM interface for SMARTCONTRACTS 
 - managed, owned, traded - TOKENS.
 - unrestricted functions and metadata(!)
