@@ -32,10 +32,8 @@ Smart Contract Development Best Practices.
 ### 1) Build a SCAFFOLD:
 ```JavaScript
 > mkdir PROJECTS/CRYPTO/EXAMPLE && cd PROJECTS/CRYPTO/EXAMPLE
-> npm init -y
+> npm init -y          //package json
 > code .
-> create README.md
-> create ./scripts
 > npm install --save-dev hardhat
 > npx hardhat    //creates config
 > npx hardhat compile
@@ -51,38 +49,6 @@ Smart Contract Development Best Practices.
 
 - Hardhat uses /scripts to DEPLOY
 `> npm install --save-dev @nomiclabs/hardhat-ethers ethers`
-RESULT:
-crypto project ready to rock,
-with /contracts, /scripts,
-/migrations, and /test. 
-`> git init`
-GitHub with LICENSE MIT
-```JavaScript
-> git remote paste.git
-> git push, git pull.
-> create s3cr3tz.json
-.gitignore s3cr3tz.json
-```
------
-### 2) SOLIDITY PROJECT!
-`> npm install --save-dev truffle`
-- Truffle or Hardhat. 
-- Truffle uses Web3.js. Hardhat uses ethers.js
-- Platforms for compile and migrate 
-- (to various TEST NETS)
-- Like Ganache (local) or Rinkeby, public.
------
-### 3) CONTRACTS!!
-`> create /contracts/BASIC_721_oz.sol`
-- go to Open Zeppelin Wizard to get code.
-- compile SOL into BYTECODE for EVM
-- configure truffle-config to use solc compiler.
-- will compile all contracts into 
-- /build/contracts/artifacts
-`> .gitignore `
-artifacts
-cache
----
 #### HARDHAT NETWORK CONSOLE
 ```JavaScript
 > npx hardhat console --network localhost
@@ -103,6 +69,34 @@ cache
 > npm install --save-dev @openzeppelin/test-helpers
 ```
 -----
+
+##RESULT:
+crypto project ready to rock,
+with /contracts, /scripts,
+/migrations, and /test. 
+
+# Truffle examples
+-----
+### 2) SOLIDITY PROJECT!
+`> npm install --save-dev truffle`
+- Truffle or Hardhat. 
+- Truffle uses Web3.js. Hardhat uses ethers.js
+- Platforms for compile and migrate 
+- (to various TEST NETS)
+- Like Ganache (local) or Rinkeby, public.
+-----
+### 3) CONTRACTS!!
+`> create /contracts/BASIC_721_oz.sol`
+- go to Open Zeppelin Wizard to get code.
+- compile SOL into BYTECODE for EVM
+- configure truffle-config to use solc compiler.
+- will compile all contracts into 
+- /build/contracts/artifacts
+`> .gitignore `
+artifacts
+cache
+---
+
 ### 4) ERC20, ERC721, ERC1155
 OpenZeppelin Contract Wizard
 https://wizard.openzeppelin.com/
