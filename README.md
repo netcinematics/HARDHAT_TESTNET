@@ -169,9 +169,10 @@ MAX ANNOTATED EXAMPLES in /contracts
 `> create test/BASIC_oz.test.js`
 
 `> npx truffle test`
+
 ----
 ### 10) OZ TEST-HELPERS ( complex assertions )
-> npm install --save-dev @openzeppelin/test-helpers
+`> npm install --save-dev @openzeppelin/test-helpers`
 - EXTRAs like
 - veryify revert, exact balances, events emitted, time.
 // const { BN, expectEvent, expectRevert } = require('@openzeppelin/test-helpers');
@@ -188,6 +189,7 @@ MAX ANNOTATED EXAMPLES in /contracts
 - multiple optional packages.
 LINK:https://eips.ethereum.org/EIPS/eip-721
 ERC721 is ERC165 - NFT deed w/ unique ID. uint256
+```JavaScript
 > event Transfer - ownership transfer: created, distroyed
 > event Approval - set approved address
 > event ApprovalForAll - operator enabled, disabled, management.
@@ -231,6 +233,7 @@ ERC721 is Context,IERC721,IERC721Metadata
 > fn _setApprovalForAll
 > fn _checkOnERC721Received
 > fn _beforeTokenTransfer
+```
 ----
 ###ERC721-OPENZEPPELIN
 LINK: https://docs.openzeppelin.com/contracts/4.x/api/token/erc721
