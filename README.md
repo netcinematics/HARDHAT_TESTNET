@@ -343,5 +343,5 @@ TODO: look to make this creator role.
 - Physical, Virtual, Negative
 
 ---
-## Thank you crypto community1
+## Thank you crypto community!
 - contact netcinematics(at)protonmail(dot)com
