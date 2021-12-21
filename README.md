@@ -1,7 +1,9 @@
 # HARDHAT_TESTNET
+
 Use HARDHAT as a REUSABLE TESTNET.
----
+
 ## zero to crypto...
+
 With OpenZeppelin Smart Contracts.
 - Unit Tests - from OpenZeppelin
 - Private Testnet - Hardhat Network
@@ -19,10 +21,10 @@ Smart Contract Development Best Practices.
 ----
 ### QUICK START (existing project): 
 - compile, ganache, migrate, exec, test,
-> npm install
-> npx hardhat compile
-> npx hardhat node
-> npx hardhat test
+`> npm install`
+`> npx hardhat compile`
+`> npx hardhat node`
+`> npx hardhat test`
 ----
 ## CREATE NEW (CRYPTO-PROJECT, HARDHAT scaffold)
 ### 1) Build a SCAFFOLD:
