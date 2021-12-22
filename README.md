@@ -20,13 +20,13 @@ Smart Contract Development Best Practices.
 - ADVANCED ASSERTIONS
 ----
 ### QUICK START (existing project): 
-- compile, ganache, migrate, exec, test,
 ```JavaScript
 > npm install
 > npx hardhat compile
 > npx hardhat node
 > npx hardhat test
 ```
+- compile, ganache, migrate, exec, test,
 ----
 ## CREATE NEW (CRYPTO-PROJECT, HARDHAT scaffold)
 ### 1) Build a SCAFFOLD:
@@ -35,20 +35,37 @@ Smart Contract Development Best Practices.
 > npm init -y          //package json
 > code .
 > npm install --save-dev hardhat
-> npx hardhat    //creates config
+> npx hardhat    //creates config, contracts, scripts, test
+> .gitignore cache artifacts
+> set up NETWORK in hardhat.config.js
 > npx hardhat compile
-> npx hardhat node    //Hardhat Network, similar to ganache
-> npx hardhat run scripts/sample-script.js --network localhost
+> npx hardhat node //Hardhat Network, RPC like ganache, 127.0.0.1:8545/
 ```
-- expose JSON-RPC interface. 
+- NODE exposes JSON-RPC interface. 
 - Connect wallet or app to http://localhost:8545.
+### HARDHAT CONTRACTS
+```JavaScript
+> create /contracts/BASIC_721_oz.sol
+> npm install --save-dev @openzeppelin/contracts
+> npx hardhat compile
+```
+#### HARDHAT UNIT TESTS
+```JavaScript
+> npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+OR
+> npm install --save-dev chai
+> npm install --save-dev @nomiclabs/hardhat-ethers
+> npm install --save-dev @openzeppelin/test-helpers
+
+> npx hardhat test
+```
+
 ### HARDHAT
 - Hardhat Network, uses @ethereumjs/vm
 - Hardhat Runner, extensible TASK RUNNER
 - tasks and plugins, tasks call tasks.
-
 - Hardhat uses /scripts to DEPLOY
-`> npm install --save-dev @nomiclabs/hardhat-ethers ethers`
+
 #### HARDHAT NETWORK CONSOLE
 ```JavaScript
 > npx hardhat console --network localhost
@@ -58,15 +75,10 @@ Smart Contract Development Best Practices.
 #### HARDHAT by SCRIPT
 ```JavaScript
 > npx hardhat run --network localhost ./scripts/index.js
+> npx hardhat run scripts/sample-script.js --network localhost
 > const address = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 > const Box = await ethers.getContractFactory('Box');
 > const box = await Box.attach(address); //get address from DEPLOY
-```
-#### HARDHAT UNIT TESTS
-```JavaScript
-> npm install --save-dev chai
-> npx hardhat test
-> npm install --save-dev @openzeppelin/test-helpers
 ```
 -----
 
@@ -85,7 +97,7 @@ with /contracts, /scripts,
 - (to various TEST NETS)
 - Like Ganache (local) or Rinkeby, public.
 -----
-### 3) CONTRACTS!!
+### 3) TRUFFLE CONTRACTS!!
 `> create /contracts/BASIC_721_oz.sol`
 - go to Open Zeppelin Wizard to get code.
 - compile SOL into BYTECODE for EVM

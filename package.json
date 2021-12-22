@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/netcinematics/HARDHAT_TESTNET#readme",
   "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
     "hardhat": "^2.8.0"
   }
 }
